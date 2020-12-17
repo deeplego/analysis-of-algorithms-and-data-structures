@@ -2,7 +2,9 @@
 # TODOs List
 ########################################################################################
 
-- put all this stuff on github
+- write an email to Donatella in order to:
+  - ask her to assess a bit the project
+  - ask a date in order to do the oral exam if the project is fine
 
 ########################################################################################
 DONE - implement permutations
@@ -24,4 +26,5 @@ DONE - remove all printData that are quite useless
 DONE - implement a python script that collects data using cpp main
 DONE - do some fancy plots
 DONE - allow main.exe to take as input arguments vectorLength for both mergesort and quicksort
+DONE - put all this stuff on github
 
