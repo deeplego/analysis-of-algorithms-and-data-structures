@@ -1,0 +1,11 @@
+vectorLength,actualAverageNumPartitions,expecteAverageNumPartitions,actualAverageNumComparisons,expectedAverageNumComparisons,actualAverageNumSwaps,expectedAverageNumSwaps
+1,1,1,2,2,0,-0.0555556
+2,2,2,5,5,0,-2.1272e-016
+3,3,3,8.66667,8.66667,0.166667,0.166667
+4,4,4,12.8333,12.8333,0.416667,0.416667
+5,5,5,17.4,17.4,0.733333,0.733333
+6,6,6,22.3,22.3,1.10556,1.10556
+7,7,7,27.4857,27.4857,1.5254,1.5254
+8,8,8,32.9214,32.9214,1.9869,1.9869
+9,9,9,38.5794,38.5794,2.48545,2.48545
+10,10,10,44.4373,44.4373,3.01733,3.01733

@@ -1,0 +1,27 @@
+########################################################################################
+# TODOs List
+########################################################################################
+
+- put all this stuff on github
+
+########################################################################################
+DONE - implement permutations
+DONE - implement mergesort
+DONE - implement mergesort with comparison counter inside
+DONE - formula for comparison counter in mergesort
+DONE - implement getRandomVector
+DONE - implement time module
+DONE - implement for-loop that collects [n, realCounter, analiticalCounter, timeElapsed]
+DONE - implement quicksort
+DONE - implement quicksort with comparison counter
+DONE - implement quicksort with partition counter (?)
+DONE - implement quicksort with swap counter
+DONE - implement printData, printDataHead, printDataTail for quicksort results
+DONE - add formulas for numComparisons and numSwaps of quicksort
+DONE - implement writeCSV
+DONE - maybe there is a bug in the formula of the mergesort comparisons counter
+DONE - remove all printData that are quite useless
+DONE - implement a python script that collects data using cpp main
+DONE - do some fancy plots
+DONE - allow main.exe to take as input arguments vectorLength for both mergesort and quicksort
+
