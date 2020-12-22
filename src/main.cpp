@@ -23,7 +23,7 @@ timeElapsed\n\
 ";
     Timer timer;
     int numIterations = maxLengthMergesort;
-    for (int n = 1; n < numIterations; ++n) {
+    for (int n = 1; n < numIterations + 1; ++n) {
         if (n % (numIterations / 10) == 0) {
             std::cout << "Mergesort: " << static_cast<float>(n) / numIterations * 100 << "%.\n";
         }
@@ -61,12 +61,20 @@ actualAverageNumPartitions,expecteAverageNumPartitions,\
 actualAverageNumComparisons,expectedAverageNumComparisons,\
 actualAverageNumSwaps,expectedAverageNumSwaps\n\
 ";
-    for (int i = 1; i < maxLength + 1; ++i) {
-        std::cout << "Quicksort n: " << i << '\n';
-        int vectorLength = i;
-        std::vector<int> randomVector = getRandomVector(i);
-        std::vector<std::vector<int>> allPermutations = getAllPermutations(randomVector);
-        int numAllPermutations = allPermutations.size();
+    for (int vectorLength = 1; vectorLength < maxLength + 1; ++vectorLength) {
+        std::cout << "Quicksort n: " << vectorLength << '\n';
+        std::vector<int> randomVector = getRandomVector(vectorLength);
+        std::vector<std::vector<int>> allPermutations;
+        int numAllPermutations;
+        if (vectorLength < 10) {
+            allPermutations = getAllPermutations(randomVector);
+            numAllPermutations = allPermutations.size();
+        } else {
+            for (int j = 0; j < vectorLength * vectorLength; ++j) {
+                allPermutations.push_back(getRandomPermutation(randomVector));
+            }
+            numAllPermutations = allPermutations.size();
+        }
         std::vector<int> allNumPartitions(numAllPermutations, 0);
         std::vector<int> allNumComparisons(numAllPermutations, 0);
         std::vector<int> allNumSwaps(numAllPermutations, 0);
@@ -80,9 +88,9 @@ actualAverageNumSwaps,expectedAverageNumSwaps\n\
         double actualAverageNumPartitions = vectorMean(allNumPartitions);
         double actualAverageNumComparisons = vectorMean(allNumComparisons);
         double actualAverageNumSwaps = vectorMean(allNumSwaps);
-        double expectedAverageNumPartitions = i;
-        double expectedAverageNumComparisons = formulaQuicksortNumComparisons(i);
-        double expectedAverageNumSwaps = formulaQuicksortNumSwaps(i); 
+        double expectedAverageNumPartitions = vectorLength;
+        double expectedAverageNumComparisons = formulaQuicksortNumComparisons(vectorLength);
+        double expectedAverageNumSwaps = formulaQuicksortNumSwaps(vectorLength); 
         std::vector<double> innerVector{
             static_cast<double>(vectorLength),
             actualAverageNumPartitions, expectedAverageNumPartitions,
@@ -129,6 +137,7 @@ int main(int argc, char* argv[]) {
 
     Data dataMergesort = mergesortMain(maxLengthMergesort);
     Data dataQuicksort = quicksortMain(maxLengthQuicksort);
+    printData(dataQuicksort);
     writeDataToCSV(dataQuicksort, "quicksortData.csv");
     writeDataToCSV(dataMergesort, "mergesortData.csv");
 

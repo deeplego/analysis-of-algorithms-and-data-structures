@@ -81,3 +81,20 @@ double harmonic(int n) {
     }
     return result;
 }
+
+void swap(std::vector<int> &vector, int idxA, int idxB) {
+    int temporary = vector[idxA];
+    vector[idxA] = vector[idxB];
+    vector[idxB] = temporary;
+}
+
+std::vector<int> getRandomPermutation(std::vector<int> &vector) {
+    int vectorLength = vector.size();
+    std::vector<int> orderedVector = quicksort(vector);
+    std::vector<int> randomPermutation = vector;
+    for (int idx = vectorLength - 1; idx > 0; --idx) {
+        int randomIdx = getRandomNumber(0, idx - 1);
+        swap(randomPermutation, idx, randomIdx);
+    }
+    return randomPermutation;
+}

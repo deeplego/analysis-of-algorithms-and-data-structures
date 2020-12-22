@@ -2,9 +2,7 @@
 # TODOs List
 ########################################################################################
 
-- write an email to Donatella in order to:
-  - ask her to assess a bit the project
-  - ask a date in order to do the oral exam if the project is fine
+- write what you have done in the README.md
 
 ########################################################################################
 DONE - implement permutations
@@ -27,4 +25,14 @@ DONE - implement a python script that collects data using cpp main
 DONE - do some fancy plots
 DONE - allow main.exe to take as input arguments vectorLength for both mergesort and quicksort
 DONE - put all this stuff on github
+DONE - edit mergesort xlabel in number of comparisons instead of average number of comparisons
+DONE - add a function that generates randomly a permutation using this procedure:
+  - given a vector of length n
+  - order the vector
+  - extract an integer from 0 to n-1
+  - swap the n-1 element with the i-th
+  - extract another integer from 0 to n-2
+  - repeat until n-n+1
+DONE - add a graph for comparing the number of comparisons of mergesort and average number
+  of comparisons of quicksort
 

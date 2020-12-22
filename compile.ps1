@@ -12,7 +12,7 @@ if ($Source) {
   }
   write-host "Compiling ./src/main.cpp..."
 
-  g++.exe -std=c++17 ./src/main.cpp `
+  g++.exe -std=c++17 -Wall ./src/main.cpp `
     ./src/utils.cpp `
     ./src/mergesort.cpp `
     ./src/quicksort.cpp `
@@ -38,7 +38,7 @@ if ($Test) {
   }
 
   write-host "Compiling ./tests/utilsTest.cpp..."
-  g++.exe -std=c++11 ./tests/utilsTest.cpp `
+  g++.exe -std=c++11 -Wall ./tests/utilsTest.cpp `
     ./src/utils.cpp `
     ./src/quicksort.cpp `
     -o ./build/utilsTest.exe
@@ -51,7 +51,7 @@ if ($Test) {
   write-host
   
   write-host "Compiling ./tests/mergesortTest.cpp..."
-  g++.exe -std=c++11 ./tests/mergesortTest.cpp `
+  g++.exe -std=c++11 -Wall ./tests/mergesortTest.cpp `
     ./src/utils.cpp `
     ./src/quicksort.cpp `
     ./src/mergesort.cpp `

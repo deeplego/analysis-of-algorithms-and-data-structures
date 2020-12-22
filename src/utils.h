@@ -21,3 +21,6 @@ int getRandomNumber(int min = 0, int max = 1000);
 std::vector<int> getRandomVector(int length);
 double vectorMean(std::vector<int> &vector);
 double harmonic(int n);
+std::vector<int> getRandomPermutation(std::vector<int> &vector);
+void swap(std::vector<int> &vector, int idxA, int idxB);
+std::vector<int> getRandomPermutation(std::vector<int> &vector);
