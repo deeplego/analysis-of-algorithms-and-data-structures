@@ -10,7 +10,7 @@ vectorLength,actualNumComparisons,expectedNumComparisons,timeElapsed
 9,29,29,0
 10,34,34,0
 11,39,39,0
-12,44,44,0.000995
+12,44,44,0
 13,49,49,0
 14,54,54,0
 15,59,59,0
@@ -81,10 +81,10 @@ vectorLength,actualNumComparisons,expectedNumComparisons,timeElapsed
 80,512,512,0
 81,520,520,0
 82,528,528,0
-83,536,536,0
+83,536,536,0.000997
 84,544,544,0
 85,552,552,0
-86,560,560,0.000998
+86,560,560,0
 87,568,568,0
 88,576,576,0
 89,584,584,0
