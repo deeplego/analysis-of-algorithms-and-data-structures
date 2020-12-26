@@ -2,7 +2,8 @@
 # TODOs List
 ########################################################################################
 
-- write what you have done in the README.md
+- describe graphs
+- tell to the profe that she can see an updated version in github.com of the project
 
 ########################################################################################
 DONE - implement permutations
@@ -35,4 +36,5 @@ DONE - add a function that generates randomly a permutation using this procedure
   - repeat until n-n+1
 DONE - add a graph for comparing the number of comparisons of mergesort and average number
   of comparisons of quicksort
+DONE - write what you have done in the README.md
 

@@ -13,6 +13,11 @@
 
 namespace fs = std::filesystem;
 
+double formulaMergesortComparisons(int n) {
+    double log2n = std::log2(n);
+    return 2. * n + n * floor(log2n) - pow(2, floor(log2n) + 1);
+}
+
 Data mergesortMain(int maxLengthMergesort) {
     Data data;
     data.header = "\
@@ -33,8 +38,7 @@ timeElapsed\n\
         timer.toc();
         double timeElapsed = timer.getElapsed() / 1e6;
         int actualNumComparisons = result.second;
-        double log2n = std::log2(n);
-        double expectedNumComparisons = 2. * n + n * floor(log2n) - pow(2, floor(log2n) + 1);
+        double expectedNumComparisons = formulaMergesortComparisons(n);
         std::vector<double> innerVector{
             static_cast<double>(n),
             static_cast<double>(actualNumComparisons), expectedNumComparisons,
@@ -45,11 +49,11 @@ timeElapsed\n\
     return data;
 }
 
-double formulaQuicksortNumComparisons(int n) {
+double formulaQuicksortComparisons(int n) {
     return 2. * (harmonic(n + 1) - 1) * (n + 1);
 }
 
-double formulaQuicksortNumSwaps(int n) {
+double formulaQuicksortSwaps(int n) {
     return 1/3. * harmonic(n + 1) * (n + 1) - 7/9. * (n + 1) + 1/2.;
 }
 
@@ -89,8 +93,8 @@ actualAverageNumSwaps,expectedAverageNumSwaps\n\
         double actualAverageNumComparisons = vectorMean(allNumComparisons);
         double actualAverageNumSwaps = vectorMean(allNumSwaps);
         double expectedAverageNumPartitions = vectorLength;
-        double expectedAverageNumComparisons = formulaQuicksortNumComparisons(vectorLength);
-        double expectedAverageNumSwaps = formulaQuicksortNumSwaps(vectorLength); 
+        double expectedAverageNumComparisons = formulaQuicksortComparisons(vectorLength);
+        double expectedAverageNumSwaps = formulaQuicksortSwaps(vectorLength); 
         std::vector<double> innerVector{
             static_cast<double>(vectorLength),
             actualAverageNumPartitions, expectedAverageNumPartitions,
