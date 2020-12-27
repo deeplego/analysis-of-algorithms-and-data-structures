@@ -2,9 +2,6 @@
 # TODOs List
 ########################################################################################
 
-- describe graphs
-- tell to the profe that she can see an updated version in github.com of the project
-
 ########################################################################################
 DONE - implement permutations
 DONE - implement mergesort
@@ -37,4 +34,6 @@ DONE - add a function that generates randomly a permutation using this procedure
 DONE - add a graph for comparing the number of comparisons of mergesort and average number
   of comparisons of quicksort
 DONE - write what you have done in the README.md
+DONE - describe how to use the compiled main.exe file in order to compute the csv files
+DONE - describe graphs
 
