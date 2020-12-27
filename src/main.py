@@ -108,6 +108,7 @@ ax.legend()
 fig.savefig(plots_dir / 'quicksort_swaps.png')
 
 #%%
+# assert sample_quicksort_data.shape[0] == sample_quicksort_data.shape[0]
 fig, ax = plt.subplots(figsize=(12, 8))
 fig.suptitle("Quicksort vs Mergesort", fontsize=16, fontweight='bold')
 width = 1.25
