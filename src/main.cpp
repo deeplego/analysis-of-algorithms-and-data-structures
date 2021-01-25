@@ -127,7 +127,7 @@ void writeDataToCSV(Data data, std::string filename = "quicksortData.csv") {
 
 int main(int argc, char* argv[]) {
     int maxLengthMergesort = 100;
-    int maxLengthQuicksort = 8;
+    int maxLengthQuicksort = 100;
     if (argc > 1) {
         std::string firstArg = std::string(argv[1]);
         if (firstArg == "-m") { maxLengthMergesort = std::stoi(argv[2]); }

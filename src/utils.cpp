@@ -93,7 +93,7 @@ std::vector<int> getRandomPermutation(std::vector<int> &vector) {
     std::vector<int> orderedVector = quicksort(vector);
     std::vector<int> randomPermutation = vector;
     for (int idx = vectorLength - 1; idx > 0; --idx) {
-        int randomIdx = getRandomNumber(0, idx - 1);
+        int randomIdx = getRandomNumber(0, idx);
         swap(randomPermutation, idx, randomIdx);
     }
     return randomPermutation;

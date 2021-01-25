@@ -36,4 +36,5 @@ DONE - add a graph for comparing the number of comparisons of mergesort and aver
 DONE - write what you have done in the README.md
 DONE - describe how to use the compiled main.exe file in order to compute the csv files
 DONE - describe graphs
+DONE - fix bug in utils::getRandomPermutation
 

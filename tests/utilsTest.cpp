@@ -21,7 +21,7 @@ void testGetAllPermutations2() {
         {1, 0}
     };
     std::vector<std::vector<int>> actual = getAllPermutations(vector);
-    for (int i = 0; i < expected.size(); ++i) {
+    for (int i = 0; i < static_cast<int>(expected.size()); ++i) {
         assert(arraysAreEqual(actual[i], expected[i]));
     }
 }
@@ -37,7 +37,7 @@ void testGetAllPermutations3() {
         {2, 1, 0}
     };
     std::vector<std::vector<int>> actual = getAllPermutations(vector);
-    for (int i = 0; i < expected.size(); ++i) {
+    for (int i = 0; i < static_cast<int>(expected.size()); ++i) {
         assert(arraysAreEqual(actual[i], expected[i]));
     }
 }

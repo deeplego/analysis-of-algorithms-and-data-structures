@@ -134,3 +134,11 @@ ax.set_xlabel("Number of Elements\n(only a few are showed in the graph)")
 ax.set_ylabel("Average Number of Comparisons", fontsize=14)
 ax.legend()
 fig.savefig(plots_dir / 'quicksort_vs_mergesort.png')
+
+# %%
+
+# %%
+
+# %%
+
+# %%
